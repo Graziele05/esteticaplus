@@ -69,7 +69,6 @@ describe('CRUD de Agendamentos', () => {
         expect(end - start).toBeLessThan(100);
     });
 
-
     test('Deve atualizar um agendamento', async () => {
         const [rows] = await connection.query('SELECT * FROM agendamentos WHERE nome_pessoa = ?', ['João']);
         const id_agenda = rows[0].id_agenda;
